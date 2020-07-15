@@ -1,0 +1,381 @@
+  [1m[35m (882.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "rails_react_js_ssr_setup_test"[0m
+  [1m[35m (1481.8ms)[0m  [1m[35mCREATE DATABASE "rails_react_js_ssr_setup_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "posts" CASCADE[0m
+  [1m[35m (176.7ms)[0m  [1m[35mCREATE TABLE "posts" ("id" bigserial primary key, "title" character varying, "description" text, "is_published" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (170.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (11.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200714130648)[0m
+  [1m[35m (193.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-07-14 14:53:43.258728"], ["updated_at", "2020-07-14 14:53:43.258728"]]
+  [1m[35m (18.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "c5e62ca5b38a08689ba42563ef2fcfdc978d3301"], ["created_at", "2020-07-14 14:53:43.286904"], ["updated_at", "2020-07-14 14:53:43.286904"]]
+  [1m[35m (20.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Compiling...
+Compiled all packs in /home/dhamodharan/Documents/ROR/rails-react-murali/public/packs-test
+Hash: c6f1c1917c302f5b826d
+Version: webpack 4.43.0
+Time: 2267ms
+Built at: 2020-07-14 20:23:47
+                                            Asset      Size              Chunks                         Chunk Names
+           js/application-31c0a7fd2aa09b742314.js   124 KiB         application  [emitted] [immutable]  application
+       js/application-31c0a7fd2aa09b742314.js.map   139 KiB         application  [emitted] [dev]        application
+    js/hello-world-bundle-1d18d4f6c81fd4279c85.js  1.39 MiB  hello-world-bundle  [emitted] [immutable]  hello-world-bundle
+js/hello-world-bundle-1d18d4f6c81fd4279c85.js.map  1.53 MiB  hello-world-bundle  [emitted] [dev]        hello-world-bundle
+           js/hello_react-7ae58b1473f0b7625ba4.js  1.05 MiB         hello_react  [emitted] [immutable]  hello_react
+       js/hello_react-7ae58b1473f0b7625ba4.js.map  1.21 MiB         hello_react  [emitted] [dev]        hello_react
+                                    manifest.json  1.12 KiB                      [emitted]              
+Entrypoint application = js/application-31c0a7fd2aa09b742314.js js/application-31c0a7fd2aa09b742314.js.map
+Entrypoint hello_react = js/hello_react-7ae58b1473f0b7625ba4.js js/hello_react-7ae58b1473f0b7625ba4.js.map
+Entrypoint hello-world-bundle = js/hello-world-bundle-1d18d4f6c81fd4279c85.js js/hello-world-bundle-1d18d4f6c81fd4279c85.js.map
+[./app/javascript/App.js] 4.43 KiB {hello-world-bundle} [built]
+[./app/javascript/Routes.js] 1.72 KiB {hello-world-bundle} [built]
+[./app/javascript/bundles/posts/CreatePost.js] 6.91 KiB {hello-world-bundle} [built]
+[./app/javascript/bundles/posts/PostDetails.js] 5.57 KiB {hello-world-bundle} [built]
+[./app/javascript/bundles/posts/UpdatePost.js] 8 KiB {hello-world-bundle} [built]
+[./app/javascript/bundles/posts/index.js] 8.37 KiB {hello-world-bundle} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/packs/hello-world-bundle.js] 177 bytes {hello-world-bundle} [built]
+[./app/javascript/packs/hello_react.jsx] 1.08 KiB {hello_react} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {hello-world-bundle} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 49 hidden modules
+
+  [1m[35m (3947.5ms)[0m  [1m[35mCREATE DATABASE "rails_react_js_ssr_setup_test-1" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "posts" CASCADE[0m
+  [1m[35m (313.0ms)[0m  [1m[35mCREATE TABLE "posts" ("id" bigserial primary key, "title" character varying, "description" text, "is_published" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (251.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (39.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200714130648)[0m
+  [1m[35m (268.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-07-14 14:53:52.484793"], ["updated_at", "2020-07-14 14:53:52.484793"]]
+  [1m[35m (57.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "c5e62ca5b38a08689ba42563ef2fcfdc978d3301"], ["created_at", "2020-07-14 14:53:52.555088"], ["updated_at", "2020-07-14 14:53:52.555088"]]
+  [1m[35m (71.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (6048.8ms)[0m  [1m[35mCREATE DATABASE "rails_react_js_ssr_setup_test-0" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "posts" CASCADE[0m
+  [1m[35m (173.4ms)[0m  [1m[35mCREATE TABLE "posts" ("id" bigserial primary key, "title" character varying, "description" text, "is_published" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (208.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (17.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200714130648)[0m
+  [1m[35m (207.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-07-14 14:53:54.354004"], ["updated_at", "2020-07-14 14:53:54.354004"]]
+  [1m[35m (21.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "c5e62ca5b38a08689ba42563ef2fcfdc978d3301"], ["created_at", "2020-07-14 14:53:54.382230"], ["updated_at", "2020-07-14 14:53:54.382230"]]
+  [1m[35m (11.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (439.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "rails_react_js_ssr_setup_test"[0m
+  [1m[35m (1387.6ms)[0m  [1m[35mCREATE DATABASE "rails_react_js_ssr_setup_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (1.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "posts" CASCADE[0m
+  [1m[35m (131.6ms)[0m  [1m[35mCREATE TABLE "posts" ("id" bigserial primary key, "title" character varying, "description" text, "is_published" boolean, "created_at" timestamp(6), "updated_at" timestamp(6))[0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "tests" CASCADE[0m
+  [1m[35m (109.0ms)[0m  [1m[35mCREATE TABLE "tests" ("id" bigserial primary key, "pri" integer, "question" character varying, "team_stages" character varying, "appears_day" character varying, "frequency" character varying, "types" character varying, "role" character varying, "required" character varying, "conditions" character varying, "mapping" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (189.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (20.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200714173710)[0m
+  [1m[35m (16.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200714130648);
+
+[0m
+  [1m[35m (125.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-07-14 17:40:31.199852"], ["updated_at", "2020-07-14 17:40:31.199852"]]
+  [1m[35m (19.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "71be83517d47bb30d3b926e69783d591c8e39520"], ["created_at", "2020-07-14 17:40:31.228265"], ["updated_at", "2020-07-14 17:40:31.228265"]]
+  [1m[35m (19.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Compiling...
+Compiled all packs in /home/dhamodharan/Documents/ROR/rails-react-murali/public/packs-test
+Hash: a112ec44af77b45625a7
+Version: webpack 4.43.0
+Time: 2252ms
+Built at: 2020-07-14 23:10:35
+                                            Asset      Size              Chunks                         Chunk Names
+           js/application-31c0a7fd2aa09b742314.js   124 KiB         application  [emitted] [immutable]  application
+       js/application-31c0a7fd2aa09b742314.js.map   139 KiB         application  [emitted] [dev]        application
+    js/hello-world-bundle-1d74831cd8f300bfac42.js   1.4 MiB  hello-world-bundle  [emitted] [immutable]  hello-world-bundle
+js/hello-world-bundle-1d74831cd8f300bfac42.js.map  1.54 MiB  hello-world-bundle  [emitted] [dev]        hello-world-bundle
+           js/hello_react-7ae58b1473f0b7625ba4.js  1.05 MiB         hello_react  [emitted] [immutable]  hello_react
+       js/hello_react-7ae58b1473f0b7625ba4.js.map  1.21 MiB         hello_react  [emitted] [dev]        hello_react
+                                    manifest.json  1.12 KiB                      [emitted]              
+Entrypoint application = js/application-31c0a7fd2aa09b742314.js js/application-31c0a7fd2aa09b742314.js.map
+Entrypoint hello_react = js/hello_react-7ae58b1473f0b7625ba4.js js/hello_react-7ae58b1473f0b7625ba4.js.map
+Entrypoint hello-world-bundle = js/hello-world-bundle-1d74831cd8f300bfac42.js js/hello-world-bundle-1d74831cd8f300bfac42.js.map
+[./app/javascript/App.js] 4.43 KiB {hello-world-bundle} [built]
+[./app/javascript/Routes.js] 1.72 KiB {hello-world-bundle} [built]
+[./app/javascript/bundles/tests/CreateTest.js] 12.1 KiB {hello-world-bundle} [built]
+[./app/javascript/bundles/tests/TestDetails.js] 9.73 KiB {hello-world-bundle} [built]
+[./app/javascript/bundles/tests/UpdateTest.js] 13.1 KiB {hello-world-bundle} [built]
+[./app/javascript/bundles/tests/index.js] 10.6 KiB {hello-world-bundle} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/packs/hello-world-bundle.js] 177 bytes {hello-world-bundle} [built]
+[./app/javascript/packs/hello_react.jsx] 1.08 KiB {hello_react} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {hello-world-bundle} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 49 hidden modules
+
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (1216.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "rails_react_js_ssr_setup_test-1"[0m
+  [1m[35m (1238.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "rails_react_js_ssr_setup_test-0"[0m
+  [1m[35m (5667.6ms)[0m  [1m[35mCREATE DATABASE "rails_react_js_ssr_setup_test-1" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "posts" CASCADE[0m
+  [1m[35m (5601.4ms)[0m  [1m[35mCREATE DATABASE "rails_react_js_ssr_setup_test-0" ENCODING = 'unicode'[0m
+  [1m[35m (120.8ms)[0m  [1m[35mCREATE TABLE "posts" ("id" bigserial primary key, "title" character varying, "description" text, "is_published" boolean, "created_at" timestamp(6), "updated_at" timestamp(6))[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "tests" CASCADE[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "posts" CASCADE[0m
+  [1m[35m (136.8ms)[0m  [1m[35mCREATE TABLE "tests" ("id" bigserial primary key, "pri" integer, "question" character varying, "team_stages" character varying, "appears_day" character varying, "frequency" character varying, "types" character varying, "role" character varying, "required" character varying, "conditions" character varying, "mapping" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (333.9ms)[0m  [1m[35mCREATE TABLE "posts" ("id" bigserial primary key, "title" character varying, "description" text, "is_published" boolean, "created_at" timestamp(6), "updated_at" timestamp(6))[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "tests" CASCADE[0m
+  [1m[35m (226.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (82.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200714173710)[0m
+  [1m[35m (58.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200714130648);
+
+[0m
+  [1m[35m (192.6ms)[0m  [1m[35mCREATE TABLE "tests" ("id" bigserial primary key, "pri" integer, "question" character varying, "team_stages" character varying, "appears_day" character varying, "frequency" character varying, "types" character varying, "role" character varying, "required" character varying, "conditions" character varying, "mapping" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (301.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (290.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-07-14 17:40:43.345560"], ["updated_at", "2020-07-14 17:40:43.345560"]]
+  [1m[35m (14.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200714173710)[0m
+  [1m[35m (47.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "71be83517d47bb30d3b926e69783d591c8e39520"], ["created_at", "2020-07-14 17:40:43.402789"], ["updated_at", "2020-07-14 17:40:43.402789"]]
+  [1m[35m (50.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200714130648);
+
+[0m
+  [1m[35m (25.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (474.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-07-14 17:40:43.923449"], ["updated_at", "2020-07-14 17:40:43.923449"]]
+  [1m[35m (30.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "71be83517d47bb30d3b926e69783d591c8e39520"], ["created_at", "2020-07-14 17:40:43.960966"], ["updated_at", "2020-07-14 17:40:43.960966"]]
+  [1m[35m (11.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (161.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (303.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "rails_react_js_ssr_setup_test"[0m
+  [1m[35m (2512.2ms)[0m  [1m[35mCREATE DATABASE "rails_react_js_ssr_setup_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "mappings" CASCADE[0m
+  [1m[35m (685.9ms)[0m  [1m[35mCREATE TABLE "mappings" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "posts" CASCADE[0m
+  [1m[35m (228.4ms)[0m  [1m[35mCREATE TABLE "posts" ("id" bigserial primary key, "title" character varying, "description" text, "is_published" boolean, "created_at" timestamp(6), "updated_at" timestamp(6))[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "roles" CASCADE[0m
+  [1m[35m (126.9ms)[0m  [1m[35mCREATE TABLE "roles" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "tests" CASCADE[0m
+  [1m[35m (204.7ms)[0m  [1m[35mCREATE TABLE "tests" ("id" bigserial primary key, "pri" integer, "question" character varying, "team_stages" character varying, "appears_day" character varying, "frequency" character varying, "types" character varying, "role" character varying, "required" character varying, "conditions" character varying, "mapping" character varying, "created_at" timestamp(6), "updated_at" timestamp(6))[0m
+  [1m[35m (123.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (22.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200715054619)[0m
+  [1m[35m (15.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200714130648),
+(20200714173710),
+(20200715054555);
+
+[0m
+  [1m[35m (165.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-07-15 05:59:35.962353"], ["updated_at", "2020-07-15 05:59:35.962353"]]
+  [1m[35m (18.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "73dd45040140e3e8203ef021d40512c481a5ddb7"], ["created_at", "2020-07-15 05:59:35.996121"], ["updated_at", "2020-07-15 05:59:35.996121"]]
+  [1m[35m (22.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Compiling...
+Compiled all packs in /home/dhamodharan/Documents/ROR/rails-react-murali/public/packs-test
+Hash: 72eb1b30d63eaac9ba85
+Version: webpack 4.43.0
+Time: 3331ms
+Built at: 2020-07-15 11:29:42
+                                            Asset      Size              Chunks                         Chunk Names
+           js/application-31c0a7fd2aa09b742314.js   124 KiB         application  [emitted] [immutable]  application
+       js/application-31c0a7fd2aa09b742314.js.map   139 KiB         application  [emitted] [dev]        application
+    js/hello-world-bundle-fa380ff006954ff07474.js  1.41 MiB  hello-world-bundle  [emitted] [immutable]  hello-world-bundle
+js/hello-world-bundle-fa380ff006954ff07474.js.map  1.54 MiB  hello-world-bundle  [emitted] [dev]        hello-world-bundle
+           js/hello_react-7ae58b1473f0b7625ba4.js  1.05 MiB         hello_react  [emitted] [immutable]  hello_react
+       js/hello_react-7ae58b1473f0b7625ba4.js.map  1.21 MiB         hello_react  [emitted] [dev]        hello_react
+                                    manifest.json  1.12 KiB                      [emitted]              
+Entrypoint application = js/application-31c0a7fd2aa09b742314.js js/application-31c0a7fd2aa09b742314.js.map
+Entrypoint hello_react = js/hello_react-7ae58b1473f0b7625ba4.js js/hello_react-7ae58b1473f0b7625ba4.js.map
+Entrypoint hello-world-bundle = js/hello-world-bundle-fa380ff006954ff07474.js js/hello-world-bundle-fa380ff006954ff07474.js.map
+[./app/javascript/App.js] 4.43 KiB {hello-world-bundle} [built]
+[./app/javascript/Routes.js] 1.72 KiB {hello-world-bundle} [built]
+[./app/javascript/bundles/tests/CreateTest.js] 12.1 KiB {hello-world-bundle} [built]
+[./app/javascript/bundles/tests/TestDetails.js] 11.6 KiB {hello-world-bundle} [built]
+[./app/javascript/bundles/tests/UpdateTest.js] 13.1 KiB {hello-world-bundle} [built]
+[./app/javascript/bundles/tests/index.js] 10.6 KiB {hello-world-bundle} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/packs/hello-world-bundle.js] 177 bytes {hello-world-bundle} [built]
+[./app/javascript/packs/hello_react.jsx] 1.08 KiB {hello_react} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {hello-world-bundle} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 49 hidden modules
+
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (19.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (1931.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "rails_react_js_ssr_setup_test-1"[0m
+  [1m[35m (2436.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "rails_react_js_ssr_setup_test-0"[0m
+  [1m[35m (2982.4ms)[0m  [1m[35mCREATE DATABASE "rails_react_js_ssr_setup_test-1" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "mappings" CASCADE[0m
+  [1m[35m (3158.0ms)[0m  [1m[35mCREATE DATABASE "rails_react_js_ssr_setup_test-0" ENCODING = 'unicode'[0m
+  [1m[35m (799.0ms)[0m  [1m[35mCREATE TABLE "mappings" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "posts" CASCADE[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "mappings" CASCADE[0m
+  [1m[35m (155.5ms)[0m  [1m[35mCREATE TABLE "posts" ("id" bigserial primary key, "title" character varying, "description" text, "is_published" boolean, "created_at" timestamp(6), "updated_at" timestamp(6))[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "roles" CASCADE[0m
+  [1m[35m (698.6ms)[0m  [1m[35mCREATE TABLE "roles" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "tests" CASCADE[0m
+  [1m[35m (843.4ms)[0m  [1m[35mCREATE TABLE "mappings" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "posts" CASCADE[0m
+  [1m[35m (292.7ms)[0m  [1m[35mCREATE TABLE "tests" ("id" bigserial primary key, "pri" integer, "question" character varying, "team_stages" character varying, "appears_day" character varying, "frequency" character varying, "types" character varying, "role" character varying, "required" character varying, "conditions" character varying, "mapping" character varying, "created_at" timestamp(6), "updated_at" timestamp(6))[0m
+  [1m[35m (291.1ms)[0m  [1m[35mCREATE TABLE "posts" ("id" bigserial primary key, "title" character varying, "description" text, "is_published" boolean, "created_at" timestamp(6), "updated_at" timestamp(6))[0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "roles" CASCADE[0m
+  [1m[35m (400.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (405.8ms)[0m  [1m[35mCREATE TABLE "roles" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "tests" CASCADE[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (65.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200715054619)[0m
+  [1m[35m (67.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200714130648),
+(20200714173710),
+(20200715054555);
+
+[0m
+  [1m[35m (160.6ms)[0m  [1m[35mCREATE TABLE "tests" ("id" bigserial primary key, "pri" integer, "question" character varying, "team_stages" character varying, "appears_day" character varying, "frequency" character varying, "types" character varying, "role" character varying, "required" character varying, "conditions" character varying, "mapping" character varying, "created_at" timestamp(6), "updated_at" timestamp(6))[0m
+  [1m[35m (333.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (40.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-07-15 05:59:51.306317"], ["updated_at", "2020-07-15 05:59:51.306317"]]
+  [1m[35m (72.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (455.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (12.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "73dd45040140e3e8203ef021d40512c481a5ddb7"], ["created_at", "2020-07-15 05:59:51.439985"], ["updated_at", "2020-07-15 05:59:51.439985"]]
+  [1m[35m (17.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (26.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200715054619)[0m
+  [1m[35m (16.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200714130648),
+(20200714173710),
+(20200715054555);
+
+[0m
+  [1m[35m (218.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-07-15 05:59:51.775153"], ["updated_at", "2020-07-15 05:59:51.775153"]]
+  [1m[35m (30.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "73dd45040140e3e8203ef021d40512c481a5ddb7"], ["created_at", "2020-07-15 05:59:51.812460"], ["updated_at", "2020-07-15 05:59:51.812460"]]
+  [1m[35m (32.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Compiling...
+Compiled all packs in /home/dhamodharan/Documents/ROR/rails-react-murali/public/packs-test
+Hash: 15e49eb7682fa561a518
+Version: webpack 4.43.0
+Time: 2396ms
+Built at: 2020-07-15 12:15:56
+                                            Asset      Size              Chunks                         Chunk Names
+           js/application-31c0a7fd2aa09b742314.js   124 KiB         application  [emitted] [immutable]  application
+       js/application-31c0a7fd2aa09b742314.js.map   139 KiB         application  [emitted] [dev]        application
+    js/hello-world-bundle-253a2f23fd018fd0b86f.js  1.41 MiB  hello-world-bundle  [emitted] [immutable]  hello-world-bundle
+js/hello-world-bundle-253a2f23fd018fd0b86f.js.map  1.54 MiB  hello-world-bundle  [emitted] [dev]        hello-world-bundle
+           js/hello_react-7ae58b1473f0b7625ba4.js  1.05 MiB         hello_react  [emitted] [immutable]  hello_react
+       js/hello_react-7ae58b1473f0b7625ba4.js.map  1.21 MiB         hello_react  [emitted] [dev]        hello_react
+                                    manifest.json  1.12 KiB                      [emitted]              
+Entrypoint application = js/application-31c0a7fd2aa09b742314.js js/application-31c0a7fd2aa09b742314.js.map
+Entrypoint hello_react = js/hello_react-7ae58b1473f0b7625ba4.js js/hello_react-7ae58b1473f0b7625ba4.js.map
+Entrypoint hello-world-bundle = js/hello-world-bundle-253a2f23fd018fd0b86f.js js/hello-world-bundle-253a2f23fd018fd0b86f.js.map
+[./app/javascript/App.js] 4.43 KiB {hello-world-bundle} [built]
+[./app/javascript/Routes.js] 1.72 KiB {hello-world-bundle} [built]
+[./app/javascript/bundles/tests/CreateTest.js] 12.9 KiB {hello-world-bundle} [built]
+[./app/javascript/bundles/tests/TestDetails.js] 11.6 KiB {hello-world-bundle} [built]
+[./app/javascript/bundles/tests/UpdateTest.js] 13.1 KiB {hello-world-bundle} [built]
+[./app/javascript/bundles/tests/index.js] 10.6 KiB {hello-world-bundle} [built]
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/packs/hello-world-bundle.js] 177 bytes {hello-world-bundle} [built]
+[./app/javascript/packs/hello_react.jsx] 1.08 KiB {hello_react} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {hello-world-bundle} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 49 hidden modules
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (21.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (148.9ms)[0m  [1m[35mALTER TABLE "mappings" DISABLE TRIGGER ALL;ALTER TABLE "posts" DISABLE TRIGGER ALL;ALTER TABLE "roles" DISABLE TRIGGER ALL;ALTER TABLE "tests" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (107.9ms)[0m  [1m[35mALTER TABLE "mappings" DISABLE TRIGGER ALL;ALTER TABLE "posts" DISABLE TRIGGER ALL;ALTER TABLE "roles" DISABLE TRIGGER ALL;ALTER TABLE "tests" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (864.2ms)[0m  [1m[35mTRUNCATE TABLE "mappings", "posts", "roles", "tests"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "mappings" ENABLE TRIGGER ALL;ALTER TABLE "posts" ENABLE TRIGGER ALL;ALTER TABLE "roles" ENABLE TRIGGER ALL;ALTER TABLE "tests" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (989.6ms)[0m  [1m[35mTRUNCATE TABLE "mappings", "posts", "roles", "tests"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL;ALTER TABLE "mappings" ENABLE TRIGGER ALL;ALTER TABLE "posts" ENABLE TRIGGER ALL;ALTER TABLE "roles" ENABLE TRIGGER ALL;ALTER TABLE "tests" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m

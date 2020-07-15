@@ -1,0 +1,11 @@
+<h2>Import CSV</h2>
+<%= form_tag test_import_index_path, multipart: true do %>
+
+<%= file_field_tag :file, required: true %>
+<%= submit_tag "Import" %>
+
+<% end %>
+
+<%= react_component("App", props: @hello_world_props, prerender: false) %>
+
+
